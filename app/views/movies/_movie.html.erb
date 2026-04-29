@@ -1,0 +1,13 @@
+<article class="movie-card">
+  <% if movie.poster_url.present? %>
+    <%= image_tag movie.poster_url, alt: movie.title %>
+  <% end %>
+  <div>
+    <p class="eyebrow"><%= movie.release_year %><%= " / #{movie.rating}" if movie.rating.present? %></p>
+    <h3><%= link_to movie.title, movie_path(movie) %></h3>
+    <p><%= truncate(movie.synopsis, length: 140) %></p>
+    <% if movie.average_rating %>
+      <span class="score"><%= movie.average_rating %>/5 average</span>
+    <% end %>
+  </div>
+</article>

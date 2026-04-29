@@ -1,0 +1,23 @@
+<section class="hero">
+  <div>
+    <p class="eyebrow">Online movie platform</p>
+    <h1>Discover, rate, and revisit films worth talking about.</h1>
+    <p class="lede">Moovie is a Rails and PostgreSQL starter app for browsing a curated movie catalog.</p>
+  </div>
+</section>
+
+<% if @featured_movies.any? %>
+  <section class="section">
+    <h2>Featured</h2>
+    <div class="movie-grid">
+      <%= render @featured_movies %>
+    </div>
+  </section>
+<% end %>
+
+<section class="section">
+  <h2>All movies</h2>
+  <div class="movie-grid">
+    <%= render @movies %>
+  </div>
+</section>
