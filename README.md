@@ -48,5 +48,5 @@ The build workflow lives in `.github/workflows/build.yml`.
 Set this repository secret before running database-backed jobs:
 
 ```sh
-DATABASE_URL
+DATABASE_URL=
 ```
